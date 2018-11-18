@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title> Paket
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+
+  <ion-card>
+
+    <div>
+      <img src="assets/imgs/ctr2.jpg"/>
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        Hemat
+      </ion-card-title>
+      <p>
+        Detail Paket (Menu)
+      </p>
+      <ion-card-title>
+        100K
+      </ion-card-title>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start (click)="openModal({charNum: 0})">
+          <ion-icon name='md-basket'></ion-icon>
+          Detail
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Pesan
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+  <ion-card>
+
+    <div>
+      <img src="assets/imgs/ctr2.jpg"/>
+    </div>
+
+    <ion-card-content>
+      <ion-card-title>
+        Pesta
+      </ion-card-title>
+      <p>
+        Detail Paket (Menu)
+      </p>
+      <ion-card-title>
+        1000K
+      </ion-card-title>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start (click)="openModal({charNum: 1})">
+          <ion-icon name='md-basket'></ion-icon>
+          Detail
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name='share-alt'></ion-icon>
+          Pesan
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+</ion-content>

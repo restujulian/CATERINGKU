@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title> CATERINGKU
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-page">
+
+  <ion-fab top right edge>
+    <button ion-fab color="vibrant" mini><ion-icon name="ios-apps"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-whatsapp"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-instagram"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/> <!-- Memanggil Gambar -->
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2> <!-- Memangil Title atau Judul -->
+      <p [innerHTML]="slide.description"></p> <!-- Memanggil Deskripsi -->
+    </ion-slide>
+  </ion-slides>
+</ion-content>
