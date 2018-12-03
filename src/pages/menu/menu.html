@@ -18,24 +18,13 @@
 <ion-content>
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchCase="'makanan'">
-      <ion-item>
+      <ion-item *ngFor="let item of itemk">
 	      <ion-thumbnail item-start>
-	        <img src="assets/imgs/ctr2.jpg">
+	        <img src="assets/imgs/ct2.jpg">
 	      </ion-thumbnail>
-	      <h2><?php echo "Ayam Goreng";?></h2>
-	      <p>• 12K</p>
-	      <button ion-button icon-start (click)="doAlert()">
-				  <ion-icon name="md-basket"></ion-icon>
-				  Pesan
-				</button>
-	    </ion-item>
-      <ion-item>
-	      <ion-thumbnail item-start>
-	        <img src="assets/imgs/ctr2.jpg">
-	      </ion-thumbnail>
-	      <h2>Ayam Bakar</h2>
-	      <p>• 15K</p>
-	      <button ion-button icon-start (click)="doAlert()">
+	      <h2>{{ item.nama_menu }}</h2>
+	      <p>• Rp. {{ item.harga }}</p>
+	      <button ion-button icon-start (click)="addEntry( item.id_menu, item.nama_menu, item.harga)">
 				  <ion-icon name="md-basket"></ion-icon>
 				  Pesan
 				</button>
@@ -43,24 +32,13 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'minuman'">
-      <ion-item>
+      <ion-item *ngFor="let item of itemn">
 	      <ion-thumbnail item-start>
-	        <img src="assets/imgs/ctr2.jpg">
+	        <img src="assets/imgs/minum.jpg">
 	      </ion-thumbnail>
-	      <h2>Es Teh</h2>
-	      <p>• 2K</p>
-	      <button ion-button icon-start (click)="doAlert()">
-				  <ion-icon name="md-basket"></ion-icon>
-				  Pesan
-				</button>
-	    </ion-item>
-      <ion-item>
-	      <ion-thumbnail item-start>
-	        <img src="assets/imgs/ctr2.jpg">
-	      </ion-thumbnail>
-	      <h2>Es Jeruk</h2>
-	      <p>• 3K</p>
-	      <button ion-button icon-start (click)="doAlert()">
+	      <h2>{{ item.nama_menu }}</h2>
+	      <p>• Rp. {{ item.harga }}</p>
+	      <button ion-button icon-start (click)="addEntry( item.id_menu, item.nama_menu, item.harga)">
 				  <ion-icon name="md-basket"></ion-icon>
 				  Pesan
 				</button>

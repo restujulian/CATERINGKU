@@ -7,35 +7,27 @@
 
 <ion-content>
 	<ion-list>
-	  <ion-item>
+	  <ion-item *ngFor="let item of pesanan">
 	    <ion-thumbnail item-start>
 	      <img src="assets/imgs/ctr4.jpg">
 	    </ion-thumbnail>
-	    <h2>Paket Hemat</h2>
-	    <p>10 box • 120K</p>
-	    <button ion-button color="danger" outline icon-only>
-	      <ion-icon name='remove-circle' is-active="false"></ion-icon>
-	    </button>
-	  </ion-item>
-	  <ion-item>
-	    <ion-thumbnail item-start>
-	      <img src="assets/imgs/ctr4.jpg">
-	    </ion-thumbnail>
-	    <h2>Paket Hemat</h2>
-	    <p>10 box • 120K</p>
-	    <button ion-button color="danger" outline icon-only>
-	      <ion-icon name='remove-circle' is-active="false"></ion-icon>
-	    </button>
-	  </ion-item>
-	  <ion-item>
-	    <ion-thumbnail item-start>
-	      <img src="assets/imgs/ctr4.jpg">
-	    </ion-thumbnail>
-	    <h2>Paket Hemat</h2>
-	    <p>10 box • 120K</p>
-	    <button ion-button color="danger" outline icon-only>
+	    <h2>{{ item.nama }}</h2>
+	    <p>Kode : {{ item.kode_pesan }}<br/>• Rp. {{ item.subtotal }}</p>
+	    <button ion-button color="danger" outline icon-only (click)="delPesanan( item.id_pemesanan)">
 	      <ion-icon name='remove-circle' is-active="false"></ion-icon>
 	    </button>
 	  </ion-item>
 	</ion-list>
+
+  <ion-row>
+    <ion-col text-right>
+      <a href="https://wa.me/6282297207348?text=hi%20kak...%0ASaya%20mau%20konfirmasi%20pesanan%20" target="_blank">
+      	<button ion-button color="secondary" icon-start style="float: right;">
+        	<ion-icon name='logo-whatsapp'></ion-icon>
+        	Konfirmasi Pesanan
+      	</button>
+      </a>
+    </ion-col>
+  </ion-row>
+
 </ion-content>

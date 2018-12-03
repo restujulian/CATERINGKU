@@ -7,67 +7,24 @@
 
 <ion-content class="cards-bg">
 
-  <ion-card>
-
+  <ion-card *ngFor="let paket of pakets" style="background-color: lightgray;">
     <div>
       <img src="assets/imgs/ctr2.jpg"/>
     </div>
-
     <ion-card-content>
       <ion-card-title>
-        Hemat
+        <b>{{ paket.nama }}</b> - minimal ({{ paket.minimal }} porsi)
       </ion-card-title>
       <p>
-        Detail Paket (Menu)
+        {{ paket.keterangan }}
       </p>
       <ion-card-title>
-        100K
+        • Rp. {{ paket.harga }}
       </ion-card-title>
     </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col text-center>
-        <button ion-button clear small color="danger" icon-start (click)="openModal({charNum: 0})">
-          <ion-icon name='md-basket'></ion-icon>
-          Detail
-        </button>
-      </ion-col>
+    <ion-row>
       <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Pesan
-        </button>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-  <ion-card>
-
-    <div>
-      <img src="assets/imgs/ctr2.jpg"/>
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Pesta
-      </ion-card-title>
-      <p>
-        Detail Paket (Menu)
-      </p>
-      <ion-card-title>
-        1000K
-      </ion-card-title>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col text-center>
-        <button ion-button clear small color="danger" icon-start (click)="openModal({charNum: 1})">
-          <ion-icon name='md-basket'></ion-icon>
-          Detail
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
+        <button ion-button clear small color="danger" icon-start (click)="addEntry( paket.id_paket, 'Paket '+paket.nama, paket.harga)">
           <ion-icon name='share-alt'></ion-icon>
           Pesan
         </button>
